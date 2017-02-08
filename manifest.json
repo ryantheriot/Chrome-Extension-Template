@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "TEMPLATE",
+  "version": "1.0",
+  "description": "TEMPLATE",
+  "icons": { "128":  "images/circleSmall.png" },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/circle.png"
+    },
+    "default_title": "TEMPLATE",
+    "default_popup": "popup.html"
+  },
+    "content_scripts": [
+    {
+      "matches": ["http://*.google.com/*"],
+      "js": ["plugins/jquery.min.js", "webpage.js"],
+      "css": ["webpage.css"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "homepage_url": "http://www.google.com/",
+  "offline_enabled": true,
+  "permissions": [ "idle", "tabs", "storage" ],
+  "plugins": [
+    { "path": "plugins/jquery.min.js" }
+  ],
+  "short_name": "TEMPLATE"
+}
